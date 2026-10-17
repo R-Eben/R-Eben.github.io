@@ -1,0 +1,43 @@
+# Site metadata
+title: Eben Radocchia
+description: >-
+  Electrical engineering student at the University of Vermont working on
+  robotics, autonomy, and electric drivetrains.
+author: Eben Radocchia
+email: eben.radocchia@gmail.com
+
+# For a user site (repo named R-Eben.github.io) leave baseurl empty.
+# For a project site (e.g. repo named "website"), set baseurl: "/website".
+url: "https://r-eben.github.io"
+baseurl: ""
+
+# Pages get clean URLs, e.g. /hobbies/
+permalink: pretty
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-seo-tag
+
+# Every page and post uses the main layout unless it says otherwise
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - tools

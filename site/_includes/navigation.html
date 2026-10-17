@@ -1,0 +1,44 @@
+{%- comment -%}
+  Renders the fixed two-level list from _data/navigation.yml.
+  Usage: {% include navigation.html %}
+  Only top-level items and their `children` are rendered; deeper levels are ignored.
+  The exact current page gets .is-active (solid pale-blue background);
+  a top-level item whose section contains the current page gets .is-section.
+{%- endcomment -%}
+<ul class="nav-list">
+{%- for item in site.data.navigation -%}
+  {%- if item.url contains "://" -%}
+    {%- assign href = item.url -%}
+    {%- assign external = true -%}
+  {%- else -%}
+    {%- assign href = item.url | relative_url -%}
+    {%- assign external = false -%}
+  {%- endif -%}
+  {%- assign active = false -%}
+  {%- assign in_section = false -%}
+  {%- if page.url == item.url -%}
+    {%- assign active = true -%}
+  {%- elsif external == false and item.url != "/" -%}
+    {%- assign url_len = item.url | size -%}
+    {%- assign prefix = page.url | slice: 0, url_len -%}
+    {%- if prefix == item.url -%}{%- assign in_section = true -%}{%- endif -%}
+  {%- endif %}
+  <li class="nav-item{% if active %} is-active{% endif %}{% if in_section %} is-section{% endif %}">
+    <a href="{{ href }}"{% if active %} aria-current="page"{% endif %}{% if external %} rel="noopener"{% endif %}>{{ item.title }}</a>
+    {%- if item.children %}
+    <ul class="nav-sub">
+      {%- for child in item.children -%}
+        {%- if child.url contains "://" -%}
+          {%- assign child_href = child.url -%}
+        {%- else -%}
+          {%- assign child_href = child.url | relative_url -%}
+        {%- endif %}
+      <li class="nav-item{% if page.url == child.url %} is-active{% endif %}">
+        <a href="{{ child_href }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+{%- endfor %}
+</ul>

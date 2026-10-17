@@ -1,0 +1,56 @@
+# Astrophotography portfolio, shown on /hobbies/.
+
+equipment:
+  - label: Camera
+    value: ZWO ASI533MC Pro
+  - label: Mount
+    value: ZWO AM3 harmonic drive mount
+  - label: Telescope
+    value: Apertura 72mm doublet APO refractor
+  - label: Guiding
+    value: Askar 120mm f/4 guidescope with ASI120MM guide camera
+  - label: Control
+    value: ASIAir
+  - label: Processing
+    value: Siril, GraXpert, StarNet
+
+photos:
+  - image: /assets/astronomy/m8-lagoon.jpg
+    thumb: /assets/astronomy/m8-lagoon-thumb.jpg
+    title: Lagoon Nebula
+    catalog: M8
+
+  - image: /assets/astronomy/m16-eagle.jpg
+    thumb: /assets/astronomy/m16-eagle-thumb.jpg
+    title: Eagle Nebula
+    catalog: M16
+
+  - image: /assets/astronomy/m17-omega.jpg
+    thumb: /assets/astronomy/m17-omega-thumb.jpg
+    title: Omega Nebula
+    catalog: M17
+
+  - image: /assets/astronomy/m27-dumbbell.jpg
+    thumb: /assets/astronomy/m27-dumbbell-thumb.jpg
+    title: Dumbbell Nebula
+    catalog: M27
+
+  - image: /assets/astronomy/m31-andromeda.jpg
+    thumb: /assets/astronomy/m31-andromeda-thumb.jpg
+    title: Andromeda Galaxy
+    catalog: M31
+
+  - image: /assets/astronomy/m42-orion.jpg
+    thumb: /assets/astronomy/m42-orion-thumb.jpg
+    title: Orion Nebula
+    catalog: M42
+
+  - image: /assets/astronomy/m51-whirlpool.jpg
+    thumb: /assets/astronomy/m51-whirlpool-thumb.jpg
+    title: Whirlpool Galaxy
+    catalog: M51
+
+  - image: /assets/astronomy/ngc6992-eastern-veil.jpg
+    thumb: /assets/astronomy/ngc6992-eastern-veil-thumb.jpg
+    title: Eastern Veil Nebula
+    catalog: NGC 6992

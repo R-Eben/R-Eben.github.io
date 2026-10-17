@@ -1,0 +1,18 @@
+{%- assign contact = site.data.contact -%}
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Footer">
+    {% include navigation.html %}
+  </nav>
+  <div class="footer-info">
+    <div class="footer-contact">
+      <p class="footer-name">{{ contact.name | default: site.title }}</p>
+      <p><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+      <ul class="social-links">
+        {%- for link in contact.social %}
+        <li><a href="{{ link.url }}" rel="noopener">{{ link.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+  <p class="footer-fine">&copy; {{ site.time | date: "%Y" }} {{ contact.name | default: site.title }}</p>
+</footer>

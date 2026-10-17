@@ -1,0 +1,20 @@
+{%- comment -%}
+  One project card. Usage: {% include project-card.html project=p %}
+  Reads the project page's title, date, course, summary and thumbnail front matter.
+{%- endcomment -%}
+{%- assign p = include.project -%}
+{%- if p.thumbnail -%}
+  {%- if p.thumbnail contains "://" -%}{%- assign thumb = p.thumbnail -%}{%- else -%}{%- assign thumb = p.thumbnail | relative_url -%}{%- endif -%}
+{%- endif %}
+<li class="card{% if p.thumbnail %} has-image{% endif %}">
+  {%- if p.thumbnail %}
+  <a href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ thumb }}" alt="" loading="lazy"></a>
+  {%- endif %}
+  <div>
+    <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p class="card-date">{{ p.date | date: "%B %Y" }}{% if p.course %} · {{ p.course }}{% endif %}</p>
+    {%- if p.summary %}
+    <p>{{ p.summary }}</p>
+    {%- endif %}
+  </div>
+</li>

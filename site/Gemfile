@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+# Matches the Jekyll version and plugins GitHub Pages builds with.
+# Use Ruby 3.3 locally (the version GitHub Pages runs); Jekyll 3 doesn't work on Ruby 4.
+gem "github-pages", "~> 232", group: :jekyll_plugins
+
+# Needed to run `jekyll serve` on Ruby 3+.
+gem "webrick"
+
+# Gems that used to ship with Ruby and that Jekyll 3 / Liquid 4 still load.
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"

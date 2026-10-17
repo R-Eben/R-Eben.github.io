@@ -1,0 +1,28 @@
+# Site navigation: a fixed two-level list.
+# Each top-level item has a title and url, and may have `children`
+# (one level only; grandchildren are not rendered).
+# Internal urls start with "/"; external urls start with "https://".
+
+- title: Home
+  url: /
+
+- title: Projects
+  url: /projects/
+  children:
+    - title: 8-Key Polyphonic Keyboard
+      url: /projects/ee1100-polyphonic-keyboard/
+    - title: AERO Motor & Inverter
+      url: /projects/aero-inverter/
+    - title: ROS 2 Robot Navigation Simulators
+      url: /projects/reu-ros2-navigation/
+
+- title: Hobbies
+  url: /hobbies/
+  children:
+    - title: Astronomy
+      url: /hobbies/#astronomy
+    - title: Piano
+      url: /hobbies/#piano
+
+- title: Resume
+  url: http://blog.uvm.edu/eradocch/files/2026/02/Eben_Radocchia_Resume.pdf

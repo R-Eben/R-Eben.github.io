@@ -1,0 +1,21 @@
+{%- comment -%}
+  Page banner, shown at the top of the content column.
+  Front matter:
+    banner:
+      image: /projects/my-project/banner.jpg   # site path or full https:// URL
+      alt: Description of the image
+      caption: Optional caption
+{%- endcomment -%}
+{%- if page.banner and page.banner.image -%}
+  {%- if page.banner.image contains "://" -%}
+    {%- assign banner_src = page.banner.image -%}
+  {%- else -%}
+    {%- assign banner_src = page.banner.image | relative_url -%}
+  {%- endif %}
+<figure class="banner">
+  <img src="{{ banner_src }}" alt="{{ page.banner.alt | default: '' | escape }}">
+  {%- if page.banner.caption %}
+  <figcaption>{{ page.banner.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</figcaption>
+  {%- endif %}
+</figure>
+{%- endif -%}
