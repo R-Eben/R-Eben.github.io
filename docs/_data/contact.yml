@@ -6,7 +6,7 @@ email: eben.radocchia@gmail.com
 # Headshot shown on the home page and in the sidebar. Put the file in
 # assets/images/ and uncomment this line; no photo is shown while it's commented out.
 photo: /assets/images/portrait_photo.JPG
-resume: http://blog.uvm.edu/eradocch/files/2026/02/Eben_Radocchia_Resume.pdf
+resume: /assets/resume.pdf
 
 social:
   - label: LinkedIn
