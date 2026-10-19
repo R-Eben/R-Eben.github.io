@@ -6,10 +6,10 @@ email: eben.radocchia@gmail.com
 # Headshot shown on the home page and in the sidebar. Put the file in
 # assets/images/ and uncomment this line; no photo is shown while it's commented out.
 photo: /assets/images/portrait_photo.JPG
-resume: /assets/resume.pdf
+resume: /assets/RadocchiaEben_Resume.pdf
 
 social:
   - label: LinkedIn
-    url: https://linkedin.com/in/er-radocchia-10b603336/
+    url: https://www.linkedin.com/in/eben-radocchia-10b603336/
   - label: GitHub
     url: https://github.com/R-Eben
